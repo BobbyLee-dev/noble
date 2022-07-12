@@ -1,0 +1,37 @@
+// Sass vars*****
+
+// Colors
+$blue: #0F6FFF;
+$pink: #dd1b87; // added for fun
+$gray-500: #767676;
+$color-light: #fff;
+$color-dark: #000;
+
+$color-primary: $blue;
+$color-secondary: $pink; // added for fun - link hover
+
+// Font family
+$font-primary: 'Poppins', sans-serif; // 300, 400, 700, 800.
+
+// Font weights
+$font-weight-light: 300; // post category
+$font-weight-regular: 400; // body text
+$font-weight-bold: 700; // buttons, h2, post title
+$font-weight-extra-bold: 800; // hero h1
+
+// Sizes
+$xxs: 450px;
+$xs: 600px;
+$sm: 768px;
+$md: 980px;
+$lg: 1520px;
+
+// Transitions
+$speed-fast: 0.3s;
+$speed-med: 0.5s;
+
+// Shadow
+$box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+// Border radius
+$border-radius-default: 4px; // post cards

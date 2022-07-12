@@ -1,0 +1,65 @@
+.hero-block {
+	background-color: $color-primary;
+	background-size: cover;
+	background-position: center bottom;
+	padding: 40px 20px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	@include media-min($sm) {
+		padding: 95px 40px;
+	}
+	@include media-min($lg) {
+		@include contain($lg, 95px);
+	}
+
+	.block-content-wrap {
+		padding: 35px 20px;
+		background-color: rgba($color-dark, 0.56);
+		border: 2px solid $color-light;
+		color: $color-light;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		@include media-min($xs) {
+			padding: 35px 40px 60px;
+		}
+		@include media-min($sm) {
+			max-width: 550px;
+		}
+		@include media-min($md) {
+			padding-bottom: 80px;
+		}
+		.block-editor-block-list__layout {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.block-heading, h1, h2, h3 {
+			width: 100%;
+			text-align: center;
+			color: $color-light;
+			margin-top: 0;
+			margin-bottom: 40px;
+			font-family: $font-primary;
+			font-weight: $font-weight-extra-bold;
+		}
+		p {
+			width: 100%;
+			margin-bottom: 20px;
+			font-weight: $font-weight-regular;
+			font-family: $font-primary;
+			font-size: 18px;
+			line-height: 1.5;
+			@include media-min($sm) {
+				font-size: 24px;
+			}
+		}
+
+		.button {
+			margin: 10px;
+		}
+			
+	}
+}

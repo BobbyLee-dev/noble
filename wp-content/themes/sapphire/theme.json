@@ -1,0 +1,20 @@
+{
+	"version": 2,
+	"settings": {
+		"layout": {
+			"contentSize": "800px"
+		}
+	},
+	"styles": {
+		"blocks": {
+			"core/button": {
+				"border": {
+					"color": false,
+					"radius": 0,
+					"style": false,
+					"width": false 
+				}
+			}
+		}
+	}
+}
