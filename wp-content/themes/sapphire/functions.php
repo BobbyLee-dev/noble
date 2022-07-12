@@ -32,28 +32,28 @@ function sapphire_features() {
 add_action('after_setup_theme', 'sapphire_features');
 
 // Custom post types
-function sapphire_post_types() {
-	// Recipe Post Type
-  register_post_type('recipe', array(
-    'menu_icon' => 'dashicons-food',
-    'labels' => array(
-      'name' => 'Recipes',
-      'add_new_item' => 'Add New Recipe',
-      'edit_item' => 'Edit Recipe',
-      'all_items' => 'All Recipes',
-      'singular_name' => 'Recipe'
-    ),
-		'taxonomies' => array(
-			// 'post_tag',
-			'category'
-		),
-		'show_in_rest' => true,
-    'supports' => array('title', 'editor', 'thumbnail'),
-    'public' => true,
-  ));
-}
+// function sapphire_post_types() {
+// 	// Recipe Post Type
+//   register_post_type('recipe', array(
+//     'menu_icon' => 'dashicons-food',
+//     'labels' => array(
+//       'name' => 'Recipes',
+//       'add_new_item' => 'Add New Recipe',
+//       'edit_item' => 'Edit Recipe',
+//       'all_items' => 'All Recipes',
+//       'singular_name' => 'Recipe'
+//     ),
+// 		'taxonomies' => array(
+// 			// 'post_tag',
+// 			'category'
+// 		),
+// 		'show_in_rest' => true,
+//     'supports' => array('title', 'editor', 'thumbnail'),
+//     'public' => true,
+//   ));
+// }
 
-add_action('init', 'sapphire_post_types');
+// add_action('init', 'sapphire_post_types');
 
 
 class Sapphire_block {
