@@ -26,12 +26,7 @@ function sapphire_features() {
   add_theme_support('title-tag');
   add_theme_support('post-thumbnails');
   add_theme_support('editor-styles');
-  add_editor_style(array('//https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;800&display=swap', 'build/style-index.css', 'build/index.css'));
-		// This theme uses wp_nav_menu() in one location.
-		// register_nav_menus( array(
-		// 	'header' => esc_html__( 'Header', 'sapphire' ),
-		// 	'footer' => esc_html__( 'Footer', 'sapphire' ),
-		// ) );
+  add_editor_style(array('//https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;800&display=swap', 'build/style-index.css', 'build/index.css', 'build/admin.css'));
 }
 
 add_action('after_setup_theme', 'sapphire_features');
@@ -59,34 +54,6 @@ function sapphire_post_types() {
 }
 
 add_action('init', 'sapphire_post_types');
-
-
-class PlaceholderBlock {
-  public function __construct($name) {
-    $this->name = $name;
-    add_action('init', [$this, 'onInit']);
-  }
-
-  public function ourRenderCallback($attributes, $content) {
-    ob_start();
-    require get_theme_file_path("/blocks/{$this->name}/{$this->name}.php");
-    return ob_get_clean();
-  }
-
-  public function onInit() {
-    wp_register_script($this->name, get_stylesheet_directory_uri() . "/blocks/{$this->name}/{$this->name}.js", array('wp-blocks', 'wp-editor'));
-    
-    register_block_type("sapphiretheme/{$this->name}", array(
-      'editor_script' => $this->name,
-      'render_callback' => [$this, 'ourRenderCallback']
-    ));
-  }
-}
-
-// new PlaceholderBlock('navbar');
-// new PlaceholderBlock('header');
-// new PlaceholderBlock('footer');
-
 
 
 class Sapphire_block {
@@ -129,3 +96,4 @@ class Sapphire_block_php_render {
 }
 
 new Sapphire_block_php_render('hero');
+new Sapphire_block_php_render('sapphire-content');

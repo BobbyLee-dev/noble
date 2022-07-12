@@ -1,0 +1,10 @@
+.sapphire-content {
+	margin: 60px 0;
+	padding: 0 20px;
+	@include media-min($sm) {
+		padding: 0 40px;
+	}
+	@include media-min($md) {
+		@include contain($md);
+	}
+}

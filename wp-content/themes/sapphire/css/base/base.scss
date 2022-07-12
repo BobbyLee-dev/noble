@@ -17,7 +17,6 @@ body {
 	font-weight: $font-weight-regular;
 	font-size: 16px;
 	line-height: 1.5;
-	overflow: hidden;
 	word-break: break-word;
 	hyphens: auto;
 }
@@ -35,6 +34,7 @@ h5,
 .h5,
 h6,
 .h6 {
+	text-align: center;
 	font-weight: $font-weight-bold;
 	margin-top: 1em;
 	margin-bottom: .5em;
@@ -66,10 +66,12 @@ h1,
 h2,
 .h2 {
 	font-size: 28px;
-	margin: 0 0 .3em;
-
+	font-weight: $font-weight-bold;
+	line-height: 1.5;
+	margin: 15px 0 30px;
 	@include media-min($sm) {
-		font-size: 42px;
+		margin: 20px 0 40px;
+		font-size: 36px;
 	}
 }
 
@@ -166,6 +168,7 @@ img {
 		text-decoration: none;
 		color: $color-light;
 		background-color: transparent;
+		border-color: $color-light;
 	}
 	&:active {
 		transform: translateY(1px);

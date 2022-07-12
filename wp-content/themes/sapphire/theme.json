@@ -1,10 +1,5 @@
 {
 	"version": 2,
-	"settings": {
-		"layout": {
-			"contentSize": "800px"
-		}
-	},
 	"styles": {
 		"blocks": {
 			"core/button": {

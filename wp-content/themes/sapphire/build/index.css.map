@@ -1,0 +1,1 @@
+{"version":3,"file":"index.css","mappings":";;;AAIE;EACC;AAHH,C","sources":["webpack://sapphire/./css/admin.scss"],"sourcesContent":["@import \"base/variables\";\n\n.wp-core-ui {\n\t.button {\n\t\t&:hover {\n\t\t\tborder-color: $color-light!important;\n\t\t}\n\t}\n}"],"names":[],"sourceRoot":""}

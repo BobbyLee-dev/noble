@@ -10,8 +10,10 @@
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/style.scss */ "./css/style.scss");
-/* harmony import */ var _modules_Footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/Footer */ "./src/modules/Footer.js");
-/* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/MobileMenu */ "./src/modules/MobileMenu.js");
+/* harmony import */ var _css_admin_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/admin.scss */ "./css/admin.scss");
+/* harmony import */ var _modules_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/Footer */ "./src/modules/Footer.js");
+/* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/MobileMenu */ "./src/modules/MobileMenu.js");
+
  // Our modules / classes
 
 
@@ -21,8 +23,8 @@ __webpack_require__.r(__webpack_exports__);
 // import Like from "./modules/Like"
 // Instantiate a new object using our modules/classes
 
-const footer = new _modules_Footer__WEBPACK_IMPORTED_MODULE_1__["default"]();
-const mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_2__["default"](); // const heroSlider = new HeroSlider()
+const footer = new _modules_Footer__WEBPACK_IMPORTED_MODULE_2__["default"]();
+const mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_3__["default"](); // const heroSlider = new HeroSlider()
 // const googleMap = new GoogleMap()
 // const search = new Search()
 // const myNotes = new MyNotes()
@@ -106,6 +108,18 @@ class MobileMenu {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (MobileMenu);
+
+/***/ }),
+
+/***/ "./css/admin.scss":
+/*!************************!*\
+  !*** ./css/admin.scss ***!
+  \************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ }),
 
