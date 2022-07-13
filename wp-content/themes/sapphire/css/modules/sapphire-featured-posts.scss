@@ -52,7 +52,6 @@
 			flex-basis: 0;
 			flex-grow: 1;
 			padding: 20px 20px 10px;			
-			min-height: 140px;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
@@ -61,7 +60,7 @@
 			}
 		}
 		.post-title {
-			margin-bottom: 40px;
+			margin-bottom: 50px;
 			font-size: 20px;
 			font-weight: $font-weight-bold;
 			text-transform: uppercase;
