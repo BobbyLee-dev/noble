@@ -20,7 +20,6 @@ body {
 	word-break: break-word;
 }
 
-
 h1,
 .h1,
 h2,
@@ -67,8 +66,9 @@ h2,
 h3,
 .h3 {
 	font-size: 20px;
+	font-weight: $font-weight-bold;
 	@include media-min($sm) {
-		font-size: 26px;
+		font-size: 24px;
 	}
 }
 
@@ -178,11 +178,3 @@ a {
 		color: $color-secondary;
 	}
 }
-
-.placeholder-block {
-	padding: 20px;
-	text-align: center;
-	font-size: 1.65rem;
-	background: linear-gradient(180deg, #dedede, #adadad);
-}
-
