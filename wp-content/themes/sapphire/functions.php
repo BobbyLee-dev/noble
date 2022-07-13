@@ -119,6 +119,7 @@ class Sapphire_block_php_render {
 
 new Sapphire_block_php_render('hero');
 new Sapphire_block_php_render('sapphire-content');
+new Sapphire_block_php_render('sapphire-video-popup');
 
 
 

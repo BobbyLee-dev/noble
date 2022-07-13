@@ -20,7 +20,6 @@ wp.blocks.registerBlockType('sapphiretheme/sapphire-featured-posts', {
 
 function EditComponent(props) {
 	const { attributes, setAttributes } = props;
-	console.log(attributes.postType);
 	const [postsMarkup, setPostsMarkup] = useState('');
 	useEffect(() => {
 		async function go() {

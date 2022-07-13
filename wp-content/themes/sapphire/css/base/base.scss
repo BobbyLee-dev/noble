@@ -18,6 +18,9 @@ body {
 	font-size: 16px;
 	line-height: 1.5;
 	word-break: break-word;
+	&.has-popup {
+		overflow: hidden;
+	}
 }
 
 h1,
@@ -126,7 +129,7 @@ img {
 	border-radius: 0;
 	cursor: pointer;
 	display: inline-block;
-	font-size: 16spx;
+	font-size: 16px;
 	font-family: $font-primary;
 	font-weight: $font-weight-bold;
 	line-height: 1;
@@ -141,11 +144,16 @@ img {
 	text-transform: uppercase;
 	max-width: 100%;
 
-	// &.secondary {
-	// 	background-color: transparent;
-	// 	border-color: $color-primary;
-	// 	color: $color-primary;
-	// }
+	&.secondary {
+		background-color: transparent;
+		border-color: $color-light;
+		color: $color-light;
+		padding: 14px 24px;
+		&:hover {
+			background-color: $color-light;
+			color: $color-dark;
+		}
+	}
 
 	// &.tertiary {
 	// 	background-color: transparent;

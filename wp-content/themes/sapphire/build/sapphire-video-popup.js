@@ -2,16 +2,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "@wordpress/api-fetch":
-/*!**********************************!*\
-  !*** external ["wp","apiFetch"] ***!
-  \**********************************/
-/***/ (function(module) {
-
-module.exports = window["wp"]["apiFetch"];
-
-/***/ }),
-
 /***/ "@wordpress/block-editor":
 /*!*************************************!*\
   !*** external ["wp","blockEditor"] ***!
@@ -103,32 +93,24 @@ module.exports = window["wp"]["element"];
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 !function() {
-/*!*******************************************************************!*\
-  !*** ./blocks/sapphire-featured-posts/sapphire-featured-posts.js ***!
-  \*******************************************************************/
+/*!*************************************************************!*\
+  !*** ./blocks/sapphire-video-popup/sapphire-video-popup.js ***!
+  \*************************************************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/api-fetch */ "@wordpress/api-fetch");
-/* harmony import */ var _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_2__);
 
 
-
-
-wp.blocks.registerBlockType('sapphiretheme/sapphire-featured-posts', {
-  title: 'Sapphire Featured Posts',
+wp.blocks.registerBlockType('sapphiretheme/sapphire-video-popup', {
+  title: 'Sapphire Video Popup',
   attributes: {
-    heading: {
+    buttonText: {
       type: 'string'
     },
-    postType: {
+    video: {
       type: 'string'
-    },
-    postData: {
-      type: 'array',
-      default: []
     }
   },
   edit: EditComponent,
@@ -142,50 +124,33 @@ function EditComponent(props) {
     attributes,
     setAttributes
   } = props;
-  const [postsMarkup, setPostsMarkup] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)('');
-  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    async function go() {
-      const response = await _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_2___default()({
-        path: `/featured-posts/v1/get-html?post-type=${attributes.postType}`,
-        method: 'GET'
-      });
-      setPostsMarkup(response);
-    }
-
-    go();
-  }, [attributes.postType]);
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "sapphire-featured-posts"
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "sapphire-video-popup"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    class: "heading-wrap"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+    className: "add-yt"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "h3"
+  }, "Add YouTube ID or URL"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
     allowedFormats: [],
     className: "block-heading",
-    value: attributes.heading,
+    value: attributes.video,
     onChange: text => setAttributes({
-      heading: text
+      video: text
     }),
-    placeholder: "Heading",
-    tagName: "h2"
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("select", {
-    onChange: e => setAttributes({
-      postType: e.target.value
-    })
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("option", {
-    value: ""
-  }, "Select a Post Type"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("option", {
-    value: "post",
-    selected: attributes.postType == 'post'
-  }, "Post"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("option", {
-    value: "news",
-    selected: attributes.postType == 'news'
-  }, "News")))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    dangerouslySetInnerHTML: {
-      __html: postsMarkup
-    }
+    placeholder: "YouTube ID or link",
+    tagName: "div"
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+    allowedFormats: [],
+    className: "button secondary",
+    value: attributes.buttonText,
+    onChange: text => setAttributes({
+      buttonText: text
+    }),
+    placeholder: "Button Text",
+    tagName: "div"
   }));
 }
 }();
 /******/ })()
 ;
-//# sourceMappingURL=sapphire-featured-posts.js.map
+//# sourceMappingURL=sapphire-video-popup.js.map

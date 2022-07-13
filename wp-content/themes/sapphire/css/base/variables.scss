@@ -2,6 +2,7 @@
 
 // Colors
 $blue: #0F6FFF;
+$blue-alt: #638BF2;
 $pink: #dd1b87; // added for fun
 
 $gray-400: #8B8B8B;
@@ -10,6 +11,7 @@ $color-light: #fff;
 $color-dark: #000;
 
 $color-primary: $blue;
+$color-primary-alt: $blue-alt;
 $color-secondary: $pink; // added for fun - link hover
 
 // Font family
@@ -32,6 +34,8 @@ $lg: 1440px;
 // Transitions
 $speed-fast: 0.3s;
 $speed-med: 0.5s;
+$speed-slow: 1s;
+$speed-really-slow: 3s;
 
 // Shadow
 $box-shadow: 0px 4px 4px rgba($color-dark, 0.25);
