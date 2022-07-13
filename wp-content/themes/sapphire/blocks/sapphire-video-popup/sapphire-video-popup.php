@@ -5,7 +5,7 @@ if (array_key_exists('buttonText', $attributes) && array_key_exists('video', $at
 
 <section class="sapphire-video-popup">
 
-	<a href="#0" class="button secondary yt-button"><?= $attributes['buttonText'] ?></a>
+	<button class="button secondary yt-button"><?= $attributes['buttonText'] ?></button>
 	<div class="yt-overlay">
 		<button class="close-popup"><i></i></button>
 		<div class="yt-wrapper">

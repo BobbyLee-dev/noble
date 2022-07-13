@@ -43,15 +43,13 @@ class SapphireVideoPopup {
         const closeButton = section.querySelector('.close-popup');
         const videoWrapper = section.querySelector('.ytvideo');
         const video = videoWrapper.dataset.video;
-        popupButton.addEventListener('click', e => this.showPopup(e, videoOverlay, videoWrapper, video));
-        closeButton.addEventListener('click', e => this.hidePopup(e, videoOverlay, videoWrapper));
+        popupButton.addEventListener('click', () => this.showPopup(videoOverlay, videoWrapper, video));
+        closeButton.addEventListener('click', () => this.hidePopup(videoOverlay, videoWrapper));
       });
     }
   }
 
-  showPopup(e, videoOverlay, videoWrapper, video) {
-    e.preventDefault();
-
+  showPopup(videoOverlay, videoWrapper, video) {
     if (video.includes('http')) {
       video = video.split('v=').pop();
     }
@@ -61,8 +59,7 @@ class SapphireVideoPopup {
     videoWrapper.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${video}?rel=0&autoplay=1" frameborder="0" allow="autoplay; accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
   }
 
-  hidePopup(e, videoOverlay, videoWrapper) {
-    e.preventDefault();
+  hidePopup(videoOverlay, videoWrapper) {
     this.body.classList.remove('has-popup');
     videoOverlay.classList.remove('on');
     videoWrapper.innerHTML = '';
