@@ -20,20 +20,24 @@ class Animations {
 	}
 	// End Constructor
 
+	getRatio = (el) =>
+		window.innerHeight / (window.innerHeight + el.offsetHeight);
+
 	events() {
 		gsap.to('body', { opacity: 1, duration: 1 });
 		window.addEventListener('resize', () => {
 			ScrollTrigger.refresh();
-			ScrollSmoother.refresh();
 		});
 	}
 
 	heroAnimations() {
+		const heroBg = this.hero.querySelector('.hero-bg');
 		const heroHeading = this.hero.querySelector('.hero-heading');
 		const heroParagraph = this.hero.querySelector('p');
 		const heroButtons = this.hero.querySelectorAll('.button');
 		const heroContentWrap = this.hero.querySelector('.block-content-wrap');
 
+		// hero content
 		const heroTimeline = gsap.timeline({});
 		if (heroHeading) {
 			heroTimeline.from(heroHeading, {

@@ -31,9 +31,14 @@ const sapphireVideoPopup = new _modules_SapphireVideoPopup__WEBPACK_IMPORTED_MOD
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+
+
 // register GSAP ScrollTrigger
 class Animations {
   constructor() {
+    (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "getRatio", el => window.innerHeight / (window.innerHeight + el.offsetHeight));
+
     gsap.registerPlugin(ScrollTrigger, SplitText);
     this.hero = document.querySelector('.hero-block');
     this.sapphireContent = document.querySelector('.sapphire-content');
@@ -61,15 +66,16 @@ class Animations {
     });
     window.addEventListener('resize', () => {
       ScrollTrigger.refresh();
-      ScrollSmoother.refresh();
     });
   }
 
   heroAnimations() {
+    const heroBg = this.hero.querySelector('.hero-bg');
     const heroHeading = this.hero.querySelector('.hero-heading');
     const heroParagraph = this.hero.querySelector('p');
     const heroButtons = this.hero.querySelectorAll('.button');
-    const heroContentWrap = this.hero.querySelector('.block-content-wrap');
+    const heroContentWrap = this.hero.querySelector('.block-content-wrap'); // hero content
+
     const heroTimeline = gsap.timeline({});
 
     if (heroHeading) {
@@ -265,6 +271,33 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
 
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/defineProperty.js ***!
+  \*******************************************************************/
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ _defineProperty; }
+/* harmony export */ });
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
 /***/ })
 
 /******/ 	});
@@ -328,6 +361,18 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	!function() {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
 /******/ 		};
 /******/ 	}();
 /******/ 	

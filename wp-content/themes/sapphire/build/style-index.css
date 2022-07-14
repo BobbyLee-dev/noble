@@ -603,6 +603,7 @@ a:hover {
 
 /* Modules */
 .hero-block {
+  position: relative;
   background-color: #0F6FFF;
   background-size: cover;
   background-position: center bottom;
@@ -632,6 +633,7 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: relative;
 }
 @media (min-width: 600px) {
   .hero-block .block-content-wrap {
