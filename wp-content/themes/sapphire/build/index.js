@@ -70,7 +70,6 @@ class Animations {
   }
 
   heroAnimations() {
-    const heroBg = this.hero.querySelector('.hero-bg');
     const heroHeading = this.hero.querySelector('.hero-heading');
     const heroParagraph = this.hero.querySelector('p');
     const heroButtons = this.hero.querySelectorAll('.button');

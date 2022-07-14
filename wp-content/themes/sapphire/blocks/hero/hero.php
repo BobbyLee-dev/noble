@@ -4,8 +4,7 @@ if (!array_key_exists('imageURL', $attributes)) {
 }
 ?>
 
-<section class="hero-block">
-	<div class="hero-bg" style="background-image: url('<?= $attributes['imageURL'] ?>')"></div>
+<section class="hero-block" style="background-image: url('<?= $attributes['imageURL'] ?>')">
 	<div class="block-content-wrap">
 		<?php echo $content; ?>
 	</div>
