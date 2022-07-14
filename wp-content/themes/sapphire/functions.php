@@ -20,7 +20,7 @@ function sapphire_files() {
 
 	// GSAP
 	wp_enqueue_script( 'gsap', get_template_directory_uri() . '/assets/vendor/gsap/gsap.min.js', null, null , true );
-	wp_enqueue_script( 'gsap-scrollsmooth', get_template_directory_uri() . '/assets/vendor/gsap/ScrollSmoother.min.js', null, null , true );
+	// wp_enqueue_script( 'gsap-scrollsmooth', get_template_directory_uri() . '/assets/vendor/gsap/ScrollSmoother.min.js', null, null , true );
 	wp_enqueue_script( 'gsap-scrolltrigger', get_template_directory_uri() . '/assets/vendor/gsap/ScrollTrigger.min.js', null, null , true );
 	wp_enqueue_script( 'gsap-splittext', get_template_directory_uri() . '/assets/vendor/gsap/SplitText.min.js', null, null , true );
 	 

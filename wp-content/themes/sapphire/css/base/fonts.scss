@@ -11,6 +11,7 @@ $fonts-path: "../assets/fonts" !default;
 		/* Chrome 26+, Opera 23+, Firefox 39+ */
 		url('#{$fonts-path}/poppins-v20-latin-300.woff') format('woff');
 	/* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		font-display: swap;
 }
 
 /* poppins-regular - latin */
@@ -23,6 +24,7 @@ $fonts-path: "../assets/fonts" !default;
 		/* Chrome 26+, Opera 23+, Firefox 39+ */
 		url('#{$fonts-path}/poppins-v20-latin-regular.woff') format('woff');
 	/* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		font-display: swap;
 }
 
 /* poppins-700 - latin */
@@ -35,6 +37,7 @@ $fonts-path: "../assets/fonts" !default;
 		/* Chrome 26+, Opera 23+, Firefox 39+ */
 		url('#{$fonts-path}/poppins-v20-latin-700.woff') format('woff');
 	/* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		font-display: swap;
 }
 
 /* poppins-800 - latin */
@@ -47,5 +50,6 @@ $fonts-path: "../assets/fonts" !default;
 		/* Chrome 26+, Opera 23+, Firefox 39+ */
 		url('#{$fonts-path}/poppins-v20-latin-800.woff') format('woff');
 	/* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		font-display: swap;
 }
 
