@@ -20,47 +20,60 @@
 			}
 		}
 	}
-	.yt-overlay {
-		width: 100%;
-		height: 100%;
-		position: fixed;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		overflow-y: scroll;
-		z-index: -999;
-		opacity: 0;
-		border-radius: 50%;
-		transform: scale(50%);
-		transition: all $speed-med ease-in-out;
-		padding: 80px 20px;
-		@include media-min($sm) {
-			padding: 100px 40px 40px;
-		}
-		@include media-min($md) {
-			@include contain($md, 173px, 80px);
-		}
-		&.on {
+
+	
+}
+
+.yt-overlay {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow-y: scroll;
+	z-index: -999;
+	opacity: 0;
+	border-radius: 50%;
+	transform: scale(50%);
+	transition: all $speed-med ease-in-out;
+	padding: 80px 20px;
+
+	@include media-min($sm) {
+		padding: 100px 40px 40px;
+	}
+
+	@include media-min($md) {
+		@include contain($md, 173px, 80px);
+	}
+
+	&.on {
+		opacity: 1;
+		border-radius: 0;
+		z-index: 999;
+		transform: scale(1);
+		background-color: rgba($color-dark, .71);
+
+		.yt-wrapper {
 			opacity: 1;
 			border-radius: 0;
-			z-index: 999;
 			transform: scale(1);
-			background-color: rgba($color-dark, .71);
-			.yt-wrapper {
-				opacity: 1;
-				border-radius: 0;
-				transform: scale(1);
-			}
 		}
 	}
+
 	.yt-wrapper {
 		overflow: hidden;
 		opacity: 0;
 		border-radius: 50%;
 		transform: scale(0);
 		transition: all $speed-really-slow;
+		border: 10px solid #fff;
+		@include media-min($sm) {
+			border: 20px solid #fff;
+		}
 	}
+
 	/* Responsive YT video */
 	.ytvideo {
 		width: 100%;
@@ -69,6 +82,7 @@
 		overflow: hidden;
 		/* 16x9 Aspect Ratio */
 		padding-bottom: 56.25%;
+
 		iframe {
 			position: absolute;
 			top: 0;
@@ -79,6 +93,7 @@
 			min-height: 0;
 		}
 	}
+
 	.close-popup {
 		display: block;
 		background: none;
@@ -92,6 +107,7 @@
 		z-index: 1000;
 		outline: none;
 		margin-left: 20px;
+
 		i,
 		i::before,
 		i::after {
@@ -105,18 +121,19 @@
 
 		i {
 			background: transparent;
+
 			&:before {
 				content: '';
 				top: -9px;
 				transform: rotateZ(45deg) translate(6.5px, 6.5px);
 			}
+
 			&:after {
 				content: '';
 				top: 9px;
 				transform: rotateZ(-45deg) translate(6.5px, -6.5px);
 			}
 		}
-
 	}
 }
 

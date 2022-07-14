@@ -1,4 +1,16 @@
 @import "base/variables";
+@import "base/mixins";
+
+body {
+	opacity: 1!important;
+}
+
+// Hero
+.hero-block {
+	.hero-heading,h1,h2,h3, p, .button {
+			visibility: visible!important;
+		} 
+}
 
 // Video Popup
 .sapphire-video-popup {
@@ -16,4 +28,18 @@
 			color: $color-light;
 		}
 	}
+}
+
+// Sapphire Content
+.sapphire-content {
+	background-color: rgba($color-dark, .1);
+	margin: 0;
+	padding: 55px 20px 65px;
+	@include media-min($sm) {
+		padding: 55px 40px 65px;
+	}
+	@include media-min($md) {
+		@include contain($md, 55px, 65px);
+	}
+
 }

@@ -34,7 +34,7 @@
 			flex-wrap: wrap;
 			justify-content: center;
 		}
-		.block-heading, h1, h2, h3 {
+		.hero-heading, h1, h2, h3 {
 			width: 100%;
 			text-align: center;
 			color: $color-light;
@@ -42,8 +42,10 @@
 			margin-bottom: 40px;
 			font-family: $font-primary;
 			font-weight: $font-weight-extra-bold;
+			visibility: hidden;
 		}
 		p {
+			visibility: hidden;
 			width: 100%;
 			margin-bottom: 20px;
 			font-weight: $font-weight-regular;
@@ -55,7 +57,12 @@
 			}
 		}
 		.button {
+			visibility: hidden;
 			margin: 10px;
+			width: 100%;
+			@include media-min($xs) {
+				width: auto;
+			}
 		}
 	}
 }

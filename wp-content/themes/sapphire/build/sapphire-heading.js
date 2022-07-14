@@ -186,7 +186,7 @@ function SaveComponent(props) {
 
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.RichText.Content, {
     value: props.attributes.text,
-    className: `headline headline--${props.attributes.size}`,
+    className: "hero-heading",
     tagName: getTagName()
   });
 }

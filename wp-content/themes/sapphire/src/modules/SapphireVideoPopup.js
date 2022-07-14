@@ -5,16 +5,25 @@ class SapphireVideoPopup {
 		);
 		this.body = document.querySelector('body');
 		this.events();
+
+		window.addEventListener('click', function (e) {
+			console.log(e.target);
+		});
 	}
 
 	events() {
 		if (this.sapphirePopupSections.length) {
 			this.sapphirePopupSections.forEach((section) => {
+				const body = document.querySelector('body');
 				const popupButton = section.querySelector('.yt-button');
 				const videoOverlay = section.querySelector('.yt-overlay');
 				const closeButton = section.querySelector('.close-popup');
 				const videoWrapper = section.querySelector('.ytvideo');
 				const video = videoWrapper.dataset.video;
+
+				// When using GSAP ScrollSmoother
+				// this needs to be outside the content.
+				body.appendChild(videoOverlay);
 
 				popupButton.addEventListener('click', () =>
 					this.showPopup(videoOverlay, videoWrapper, video)

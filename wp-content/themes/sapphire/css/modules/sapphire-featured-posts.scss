@@ -49,6 +49,7 @@
 			border-radius: $border-radius-default;
 		}
 		.post-content {
+			background-color: $color-light;
 			flex-basis: 0;
 			flex-grow: 1;
 			padding: 20px 20px 10px;			

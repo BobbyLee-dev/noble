@@ -18,6 +18,7 @@ body {
 	font-size: 16px;
 	line-height: 1.5;
 	word-break: break-word;
+	opacity: 0;
 	&.has-popup {
 		overflow: hidden;
 	}
@@ -185,4 +186,8 @@ a {
 	&:hover {
 		color: $color-secondary;
 	}
+}
+
+.split-line {
+	overflow: hidden;
 }

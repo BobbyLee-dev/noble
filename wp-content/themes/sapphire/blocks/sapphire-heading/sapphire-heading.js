@@ -64,7 +64,7 @@ function SaveComponent(props) {
 	return (
 		<RichText.Content
 			value={props.attributes.text}
-			className={`headline headline--${props.attributes.size}`}
+			className="hero-heading"
 			tagName={getTagName()}
 		/>
 	);
